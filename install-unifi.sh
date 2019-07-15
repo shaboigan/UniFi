@@ -4,10 +4,10 @@ Colour='\033[1;31m'
 less='\033[0m'
 
 echo -e "${Colour}By using this script, you'll remove the default pi account, update the system, install Teamviewer and install the stable UniFi controller of your choice.\nUse CTRL+C to cancel the script\n\n${less}"
-read -p "Please enter the STABLE version (e.g: 5.9.29) or press enter for version 5.10.21: " version
+read -p "Please enter the STABLE version (e.g: 5.10.21) or press enter for version 5.10.25: " version
 
 if [[ -z "$version" ]]; then
-	version='5.10.21'
+	version='5.10.25'
 fi
 
 echo -e "${Colour}\nRemoving the default pi account and the associated home directory\n${less}"
@@ -15,9 +15,10 @@ sudo deluser pi
 
 echo -e "${Colour}\n\nThe system will now upgrade all the software and firmware, as well as clean up old/unused packages.\n\n${less}"
 sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get autoremove && sudo apt-get autoclean
+#sudo apt-get update --allow-releaseinfo-change && sudo apt-get upgrade -y && sudo apt-get autoremove && sudo apt-get autoclean
 
 echo -e "${Colour}\n\nTeamviewer is downloading now.\n\n${less}"
-wget wget https://download.teamviewer.com/download/linux/teamviewer-host_armhf.deb -O teamviewer.deb
+wget https://download.teamviewer.com/download/linux/teamviewer-host_armhf.deb -O teamviewer.deb
 
 echo -e "${Colour}\n\nTeamviewer will be installed now.\n\n${less}"
 sudo dpkg -i teamviewer.deb; sudo apt-get install -f -y
