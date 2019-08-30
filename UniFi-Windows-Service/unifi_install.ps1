@@ -1,5 +1,5 @@
 Set-ExecutionPolicy AllSigned
----Install script---
+echo "Unifi Install script"
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 choco install -y ubiquiti-unifi-controller --version 5.10.25
 echo "Removing default shortcuts"

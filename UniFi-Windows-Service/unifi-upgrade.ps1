@@ -1,4 +1,5 @@
 Set-ExecutionPolicy AllSigned
+echo "Unifi Upgrade Script"
 echo "Uninstalling previous Unifi Service"
 Get-ChildItem "C:\Program Files\Java" -recurse | where {$_.Name -eq "java.exe"} | % {
 $x64Java = $_.FullName
@@ -17,3 +18,4 @@ $x64Java = $_.FullName
 Set-Location "$env:USERPROFILE\Ubiquiti UniFi\"
 & $x64Java -jar lib\ace.jar installsvc
 Get-Service "UniFi*" | Start-Service
+exit
