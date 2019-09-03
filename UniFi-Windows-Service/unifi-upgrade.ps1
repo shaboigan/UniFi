@@ -51,4 +51,3 @@ Get-Service "UniFi*" | Start-Service
 echo "Removing default shortcuts"
 Remove-Item –path "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Ubiquiti UniFi" –recurse
 Remove-Item –path "$env:USERPROFILE\Desktop\Unifi.lnk" –recurse
-exit
