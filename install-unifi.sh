@@ -4,10 +4,10 @@ Colour='\033[1;31m'
 less='\033[0m'
 
 echo -e "${Colour}By using this script, you'll remove the default pi account, update the system, install Teamviewer and install the stable UniFi controller of your choice.\nUse CTRL+C to cancel the script\n\n${less}"
-read -p "Please enter the STABLE version (e.g: 5.10.21) or press enter for version 5.10.25: " version
+read -p "Please enter the STABLE version (e.g: 5.12.23) or press enter for version 5.12.22: " version
 
 if [[ -z "$version" ]]; then
-	version='5.10.25'
+	version='5.12.22'
 fi
 
 echo -e "${Colour}\nRemoving the default pi account and the associated home directory\n${less}"
