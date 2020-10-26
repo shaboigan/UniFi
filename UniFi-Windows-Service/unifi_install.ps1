@@ -31,7 +31,7 @@ $multiplelines = @"
 Write-Host $multiplelines
 
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-choco install -y ubiquiti-unifi-controller --version 5.12.22 --force
+choco install -y ubiquiti-unifi-controller --version 5.14.23 --force
 
 echo "Installing Unifi Service"
 Get-ChildItem "C:\Program Files\Java" -recurse | where {$_.Name -eq "java.exe"} | % {
