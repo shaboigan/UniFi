@@ -1,4 +1,4 @@
-Set-ExecutionPolicy RemoteSigned -force
+Set-ExecutionPolicy Unrestricted -force
 
 $multiplelines = @"
 
