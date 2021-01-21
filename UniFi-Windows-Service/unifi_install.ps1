@@ -1,4 +1,4 @@
-Set-ExecutionPolicy Bypass
+Set-ExecutionPolicy RemoteSigned
 
 $multiplelines = @"
 
