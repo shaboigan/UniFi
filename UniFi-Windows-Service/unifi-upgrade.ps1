@@ -1,4 +1,4 @@
-Set-ExecutionPolicy AllSigned
+Set-ExecutionPolicy Bypass
 
 $multiplelines = @"
 
