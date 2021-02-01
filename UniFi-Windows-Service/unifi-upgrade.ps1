@@ -38,7 +38,7 @@ $x64Java = $_.FullName
 Set-Location "$env:USERPROFILE\Ubiquiti UniFi\"
 Get-Service "UniFi*" | Stop-Service
 & $x64Java -jar lib\ace.jar uninstallsvc
-choco upgrade -y ubiquiti-unifi-controller --version 6.0.43
+choco upgrade -y ubiquiti-unifi-controller --version 6.0.45
 
 echo "Installing Unifi Service"
 Get-ChildItem "C:\Program Files\Java" -recurse | where {$_.Name -eq "java.exe"} | % {
